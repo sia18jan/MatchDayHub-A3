@@ -1,0 +1,18 @@
+# Backend secrets
+backend/.env
+
+# Python virtual environment
+backend/venv/
+
+# Python temporary files
+__pycache__/
+*.pyc
+
+# Frontend dependencies
+frontend/node_modules/
+
+# Frontend build output
+frontend/dist/
+
+# macOS
+.DS_Store
