@@ -10,7 +10,7 @@ const [loading, setLoading] = useState(true)
   const [awayScore, setAwayScore] = useState(0)
 
 useEffect(() => {
-  fetch('http://127.0.0.1:5000/api/fixtures/latest')
+  fetch('https://matchdayhub-api.onrender.com/api/fixtures/latest')
     .then((response) => {
       if (!response.ok) {
         throw new Error('Could not load fixture')
@@ -41,7 +41,7 @@ useEffect(() => {
 async function submitScore() {
   try {
     const response = await fetch(
-      `http://127.0.0.1:5000/api/fixtures/${fixture.id}/score`,
+      `https://matchdayhub-api.onrender.com/api/fixtures/${fixture.id}/score`,
       {
         method: 'PUT',
         headers: {

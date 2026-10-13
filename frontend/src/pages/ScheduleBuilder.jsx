@@ -13,7 +13,7 @@ function ScheduleBuilder() {
   event.preventDefault()
 
   try {
-    const response = await fetch('http://127.0.0.1:5000/api/fixtures', {
+    const response = await fetch('https://matchdayhub-api.onrender.com/api/fixtures', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

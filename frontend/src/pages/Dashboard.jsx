@@ -7,13 +7,13 @@ function Dashboard() {
   const [dashboardData, setDashboardData] = useState(null)
 
 useEffect(() => {
-  fetch('http://127.0.0.1:5000/api/health')
+  fetch('https://matchdayhub-api.onrender.com/api/health')
     .then((response) => response.json())
     .then((data) => setBackendStatus(data.message))
     .catch(() => setBackendStatus('Backend connection failed'))
 }, [])
 useEffect(() => {
-  fetch('http://127.0.0.1:5000/api/dashboard')
+  fetch('https://matchdayhub-api.onrender.com/api/dashboard')
     .then((response) => {
       if (!response.ok) {
         throw new Error('Could not load dashboard data')
